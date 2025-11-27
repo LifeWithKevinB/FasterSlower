@@ -1,0 +1,28 @@
+#include <Arduino.h>
+int LED=13;
+int wait1=500;
+int wait2=250;
+
+void setup(){
+  pinMode(LED,OUTPUT);
+  
+    
+}
+void loop(){
+  for (int smaller=1000; smaller>=0; smaller-= 50){
+    
+    digitalWrite(LED,HIGH);
+    delay(smaller);
+    
+    digitalWrite(LED,LOW);
+    delay(smaller);
+}
+ for (int taller=50; taller<=1000; taller+= 50){
+    
+    digitalWrite(LED,HIGH);
+    delay(taller);
+    
+    digitalWrite(LED,LOW);
+    delay(taller);
+}
+}
